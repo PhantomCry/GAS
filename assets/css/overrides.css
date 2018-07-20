@@ -1906,3 +1906,21 @@
     margin-left: auto !important;
   }
 }
+
+#side-nav {
+  width: 100%;
+  float: right;
+  top: 50%;
+  position: fixed;
+  z-index: 2;
+  color: #50A424;
+}
+#side-nav button {
+  float: right;
+  top: 30%;
+  border: none;
+  font-size: 2rem;
+  background-color: #50A426;
+  transform: rotate(90deg);
+	transform-origin: right top;
+}
