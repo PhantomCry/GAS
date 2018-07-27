@@ -1,0 +1,51 @@
+#preview {
+  background-color: lightgrey;
+    width: 100%;
+    padding: 0;
+}
+
+.hovereffect {
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 1%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  transition: opacity 0.55s, transform 0.35s;
+  transform: scale(0,3);
+}
+
+.hovereffect:hover .overlay {
+  padding: 5px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.hovereffect img {
+  display: inline;
+  position: relative;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.hovereffect:hover img {
+  filter: brightness(0.4);
+}
+
+
+.hovereffect a, .hovereffect p {
+  color: #FFF;
+}
+
+.hide {
+  display: none !important;
+}
