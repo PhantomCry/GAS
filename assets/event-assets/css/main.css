@@ -49,3 +49,15 @@
 .hide {
   display: none !important;
 }
+
+.inlineList {
+  display: flex;
+  flex-direction: row;
+  /* Below sets up your display method, ex: flex-start|flex-end|space-between|space-around */
+  
+  /* Below removes bullets and cleans white-space */
+  list-style: none;
+  padding: 0;
+}
+
+

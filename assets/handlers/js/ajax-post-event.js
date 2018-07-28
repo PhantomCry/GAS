@@ -26,13 +26,16 @@ $(function () {
               );
               $('#moveUp').append(
                 "<span class='imgCheckbox1 hovereffect'><img src='" + value +
-                "' width='250' height='250' name='" +
+                "' width='264' height='250' name='" +
                 filename +
                 "'><div class='overlay toggle-hover'><a id='test' href='assets/images/events/Main/" +
                 eventName + "' data-toggle='modal' data-target='#eventConts'>" + eventName +
                 "</a></div></span>");
             });
           }
+        });
+        bootoast.toast({
+          message: 'Event Created',
         });
       }
     });
@@ -46,8 +49,7 @@ $(function () {
         url: '../handlers/php/marking-handler.php',
         data: dataString,
         success: function (data) {
-          console.log("Marking Success");
-          console.log(data);
+          console.log("Done");
         }
       })
     });
@@ -95,7 +97,6 @@ $(function () {
         form.append('fileToUpload[]', $(this).get(0).files[i]);
       }
       form.append('eventName', eventName);
-      console.log(form);
       $('#event-content-form').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
@@ -106,6 +107,7 @@ $(function () {
           contentType: false,
           processData: false,
           success: function (data) {
+            console.log(data);
             $.ajax({
               type: "POST",
               url: "../data/event-content-data.php",
@@ -128,6 +130,9 @@ $(function () {
           }
         });
       });
+      // $('#eventConts').on('hidden.bs.modal', function (e) {
+      //   form = [];
+      // });
       // End of Event-Contents
     });
     $.ajax({

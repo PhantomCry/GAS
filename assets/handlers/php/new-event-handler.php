@@ -37,7 +37,7 @@
             $newFileName = $dir . $eventName . "_" . basename($_FILES['eventCover']['name']); 
             // echo $newFileName; 
             if (move_uploaded_file($_FILES['eventCover']['tmp_name'], $newFileName)) {
-              echo "The file has been uploaded";
+              // echo "The file has been uploaded";
             } else{
                 echo "Failed to Upload: " . $_FILES['eventCover']['error'];
             }

@@ -12,5 +12,6 @@ $(function () {
   $('#eventConts').on('hidden.bs.modal', function (e) {
     $(this).find("#event-title").html('');
     $(this).find("#eventCont").html('');
+    location.reload(true);
   });
 });

@@ -15,7 +15,7 @@ $(function () {
         );
         $('#moveUp').append(
           "<span class='imgCheckbox1 hovereffect'><img src='" + value +
-          "' width='250' height='250' name='" +
+          "' width='264' height='250' name='" +
           filename +
           "'><div class='overlay toggle-hover'><a id='test' href='assets/images/events/Main/" +
           eventName + "' data-toggle='modal' data-target='#eventConts'>" + eventName +
@@ -28,7 +28,7 @@ $(function () {
         $("#moveUp").find("img").attr("height", 225);
         $("#moveUp").find("span").removeClass("hovereffect");
         $("#moveUp").find(".toggle-hover").addClass("hide");
-        $("#moveUp").find("#up-buttons").removeClass("hide");
+        $("#up-buttons").removeClass("hide");
         $("#cancel-edit").removeClass("hide");
       });
       $("#cancel-edit").on('click', function () {
@@ -53,7 +53,7 @@ $(function () {
         );
         $('#movePast').append(
           "<span class='imgCheckbox1 hovereffect'><img src='" + value +
-          "' width='250' height='250' name='" +
+          "' width='264' height='250' name='" +
           filename + "'><div class='overlay toggle-hover'><a href='assets/images/events/Main/" +
           eventName + "'>" + eventName + "</a></div></span>")
       });
@@ -63,7 +63,7 @@ $(function () {
         $("#movePast").find("img").attr("height", 225);
         $("#movePast").find("span").removeClass("hovereffect");
         $("#movePast").find(".toggle-hover").addClass("hide");
-        $("#movePast").find("#past-buttons").removeClass("hide");
+        $("#past-buttons").removeClass("hide");
       });
       $("#cancel-edit").on('click', function () {
         location.reload(true);
