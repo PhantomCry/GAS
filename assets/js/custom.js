@@ -122,7 +122,36 @@ $(document).ready(function () {
 
 	// iii.  testimonial
 
-	// Events Carousel Start
+  // Events Carousel Start
+  $('#test-events').owlCarousel({
+    items: 1,
+		margin: 200,
+		loop: true,
+		smartSpeed: 1000,
+		autoplay: true,
+    autoplayHoverPause: false,
+		responsive: {
+			500: {
+				items: 1
+			},
+			768: {
+				items: 3
+			},
+			1024: {
+				items: 2
+			},
+			1440: {
+				items: 2
+			},
+			1366: {
+				items: 1
+			},
+			2560: {
+				items: 1
+			}
+		}
+  });
+
 	$('#up-events').owlCarousel({
 		items: 1,
 		margin: 20,

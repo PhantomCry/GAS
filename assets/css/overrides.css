@@ -68,12 +68,7 @@
 }
 
 #service {
-  background: url("../img/toll.jpg") no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 100vh;
 }
 
 #service-content {
@@ -83,10 +78,6 @@
 
 .service-details>div>h2 {
   color: #fff;
-}
-
-#call-center {
-  background-color: #fff !important;
 }
 
 #service-call {
@@ -129,10 +120,6 @@
 
 .hm-footer {
   background: rgba(29, 116, 154, 1);
-}
-
-.footer-copyright {
-  background: #10455c !important;
 }
 
 .card {
@@ -458,8 +445,6 @@
   color: green !important;
 }
 
-
-
 .event-header ul li button {
   background: none;
   border: none;
@@ -469,11 +454,11 @@
 }
 
 .event-header ul li button:hover {
-  box-shadow: inset 0 -3px 0 #50A426;
+  box-shadow: inset 0 -3px 0 #8d998a;
 }
 
-.selected{
-  box-shadow: inset 0 -3px 0 #50A426;
+.selected {
+  box-shadow: inset 0 -3px 0 #8d998a;
 }
 
 .contact-form .single-contact-btn button {
@@ -488,7 +473,7 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 1366px) and (min-width: 1366px){
+@media screen and (max-width: 1366px) and (min-width: 1366px) {
   .events .owl-carousel .owl-item img {
     max-width: 30%;
   }
@@ -1906,6 +1891,34 @@
     margin-left: auto !important;
   }
 }
+.m-auto {
+  margin: auto !important;
+}
+
+.mt-auto,
+.my-auto {
+  margin-top: auto !important;
+}
+
+.mr-auto,
+.mx-auto {
+  margin-right: auto !important;
+}
+
+.mb-auto,
+.my-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+
+.justify-content-center {
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
 
 #side-nav {
   width: 100%;
@@ -1915,6 +1928,7 @@
   z-index: 2;
   color: #50A424;
 }
+
 #side-nav button {
   float: right;
   top: 30%;
@@ -1922,5 +1936,130 @@
   font-size: 2rem;
   background-color: #50A426;
   transform: rotate(90deg);
-	transform-origin: right top;
+  transform-origin: right top;
 }
+
+.single-slide-item h2 {
+  font-size: 5.8rem !important;
+}
+
+#up-events img {
+  object-fit: cover;
+  display: block;
+  max-width: 100vw;
+  max-height: 50vh;
+}
+#past-events img {
+  object-fit: cover;
+  display: block;
+  max-width: 100vw;
+  max-height: 50vh;
+}
+
+.event-header{
+  margin-top: -18vh !important;
+}
+
+.col-fluid {
+  display: flex;
+  padding: 0;
+}
+
+.img-fluid {
+  min-height: 50vh;
+}
+
+#tolling {
+  background-color: #dbd6d6;
+}
+
+#img-review-content {
+  min-height: 50vh;
+  padding: 0;
+}
+
+.card-group {
+  padding-top: 5vh !important;
+  border: none;
+}
+.card-body {
+  padding: 1.5rem;
+}
+
+.card {
+  border: none;
+}
+
+#call-center-content {
+  min-height: 50vh;
+  padding: 0;
+}
+
+.col-fluid {
+  display: flex;
+  padding: 0;
+}
+
+.img-fluid {
+  min-height: 50vh;
+}
+
+#call-center {
+  background-color: #dbd6d6;
+}
+#call-center-content {
+  min-height: 50vh;
+  padding: 0;
+}
+
+.feat-img {
+  max-height: 50vh;
+  min-width: 100%;
+}
+
+#call-center p {
+  font-size: 2.2rem;
+}
+
+#tolling p {
+  font-size: 2.2rem;
+}
+
+
+#about p {
+  font-size: 2rem;
+}
+
+#team-month {
+  background: url('../../assets/images/banner/TMM_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, .2);
+  min-height: 100vh;
+}
+
+#best-mem {
+  object-fit: cover;
+  max-width: 50vh;
+  height: auto;
+  align-self: center;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+
+#footer {
+  background-color: #10455c;
+  min-height: 30vh;
+}
+.footer-copyright{
+  padding: 0 !important;
+}
+#footer-copyright {
+  background-color: #2a5f74;
+  min-height: 10vh;
+}
+

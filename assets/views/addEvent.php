@@ -11,11 +11,10 @@
 </head>
 
 <body>
-  <?php include 'includes/navbar.php';?>
-  <!-- <div class="container-fluid"> -->
+  <?php include 'includes/events/navbar.php';?>
   <div class="container-fluid">
     <!-- Modal -->
-    <?php include 'includes/create-event-modal.php' ?>
+    <?php include 'includes/events/create-event-modal.php'; ?>
 
     <div class="row">
       <ul class="inlineList container-fluid border-bottom">
@@ -76,7 +75,6 @@
       </div>
     </div>
     <!-- End of Clicked Event -->
-    <?php include 'includes/scripts.php';?>
+    <?php include 'includes/events/scripts.php';?>
 </body>
-
 </html>
