@@ -27,12 +27,12 @@
     <div class="container-fluid">
       <div class="row">
         <div class="card-deck mx-auto text-center">
-          <div class="card">
-            <img class="card-img-top" id="best-mem" src="../../assets/images/logo/template.png" alt="Card image cap">
+          <div class="card" id="current-month">
+            <!-- <img class="card-img-top" id="best-mem" src="../../assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
               <p class="card-text">Employee Position</p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
