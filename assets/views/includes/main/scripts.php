@@ -30,11 +30,20 @@
 <!--Custom JS-->
 <script type="text/javascript" src="assets/js/jak-menusearch.js"></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
+
+<!--Ekko Lightbox Plugin-->
+<script type="text/javascript" src="assets/third-party-plugins/js/ekko-lightbox.min.js"></script>
+
+<!--Plugin Initializers-->
 <script>
   $('[data-toggle="popover"]').popover({
     html: true,
     content: function () {
       return $('#popover-content').html();
     }
+  });
+  $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
   });
 </script>

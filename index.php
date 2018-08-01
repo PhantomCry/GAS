@@ -59,6 +59,9 @@
 
   <!-- overrides.css -->
   <link rel="stylesheet" href="assets/css/overrides.css">
+
+  <!-- Ekko Lightbox Plugin -->
+  <link rel="stylesheet" href="assets/third-party-plugins/css/ekko-lightbox.css">
 </head>
 
 <body>
@@ -98,7 +101,9 @@
                       $dir = "assets/images/events/Upcoming/*.{jpg,png,gif,JPG,jpeg}";
                       $images = glob($dir, GLOB_BRACE);
                       foreach($images as $image):
+                          echo "<a href='" . $image ."' data-toggle='lightbox' data-gallery='upcoming-gallery'>";
                           echo "<img src='" . $image . "' />";
+                          echo "</a>";
                       endforeach;
                   ?>
                   </div>
@@ -107,7 +112,9 @@
                       $dir = "assets/images/events/Past/*.{jpg,png,gif,JPG,jpeg}";
                       $images = glob($dir, GLOB_BRACE);
                       foreach($images as $image):
+                          echo "<a href='" . $image ."' data-toggle='lightbox' data-gallery='past-gallery'>";
                           echo "<img src='" . $image . "' />";
+                          echo "</a>";
                       endforeach;
                   ?>
                   </div>

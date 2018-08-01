@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../third-party-plugins/css/jpreview.css">
   <link rel="stylesheet" href="../third-party-plugins/css/bootoast.min.css">
   <link rel="stylesheet" href="../event-assets/css/main.css">
+  <link rel="stylesheet" href="../third-party-plugins/css/ekko-lightbox.css">
 </head>
 
 <body>

@@ -121,7 +121,7 @@ $(function () {
                   "</h5><button type='button' class='close' data-dismiss='modal'><span>&times;</span></button>");
                 var jsonData = JSON.parse(data);
                 $(jsonData).each(function (index, value) {
-                  $('#eventCont').append("<img src=" + value + " width='255' height='255'>");
+                  $('#eventCont').append("<a href='" + value + "' data-toggle='lightbox' data-gallery='event-content-gallery'><img src=" + value + " width='255' height='255'></a>");
                 });
                 $('#eventCont').append(
                   "<div id='preview-container' class='jpreview-container pt-3 border mt-3'></div>");
@@ -144,7 +144,7 @@ $(function () {
       success: function (data) {
         var jsonData = JSON.parse(data);
         $(jsonData).each(function (index, value) {
-          $('#eventCont').append("<img src=" + value + " width='255' height='255'>");
+          $('#eventCont').append("<a href='" + value + "' data-toggle='lightbox' data-gallery='event-content-gallery'><img src=" + value + " width='255' height='255'></a>");
         });
         $('#eventCont').append(
           "<div id='preview-container' class='jpreview-container pt-3 border mt-3'></div>");
