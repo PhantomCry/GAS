@@ -53,11 +53,17 @@
 .inlineList {
   display: flex;
   flex-direction: row;
-  /* Below sets up your display method, ex: flex-start|flex-end|space-between|space-around */
-  
-  /* Below removes bullets and cleans white-space */
   list-style: none;
   padding: 0;
 }
 
+#award-manager {
+  text-decoration: none;
+  color: #FFF;
+  border: inset 2px 2px 2px black;
+}
 
+#event-manager {
+  text-decoration: none;
+  color: #FFF;
+}
