@@ -14,9 +14,6 @@
 <body>
   <?php include 'includes/events/navbar.php';?>
   <div class="container-fluid">
-    <!-- Modal -->
-    <?php include 'includes/events/create-event-modal.php'; ?>
-
     <div class="row">
       <ul class="inlineList container-fluid border-bottom">
         <li class="pl-3">

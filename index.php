@@ -142,7 +142,10 @@
         </div>
         <div class="col-lg-6 p-5">
           <div class="embed-responsive embed-responsive-16by9 rounded">
-            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/212307386" https://player.vimeo.com/video/212307386></iframe>
+          <video width="400" controls>
+  <source src="assets/vids/GAS_VID.MP4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
           </div>
         </div>
       </div>

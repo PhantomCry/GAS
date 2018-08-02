@@ -67,3 +67,29 @@
   text-decoration: none;
   color: #FFF;
 }
+
+.card {
+  border: none !important;
+}
+
+#team-month .card-img-top {
+    object-fit: cover;
+    max-width: 20vw;
+    height: auto;
+    align-self: center;
+}
+
+#particles-js{
+  background-color: #246b1e;
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:-1; 
+}
+
+#contents {
+  position: fixed;
+}
+

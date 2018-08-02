@@ -90,7 +90,7 @@ $(function () {
     var eventName = value.substr(value.lastIndexOf("/") + 1);
     $('#event-title').append("<h5 class='modal-title'>" + eventName +
       "</h5><button type='button' class='close' data-dismiss='modal'><span>&times;</span></button>");
-    // Event Lister for Event-Contents
+    // Event Listener for Event-Contents
     $('#event-content').on('change', function () {
       var form = new FormData();
       for (var i = 0; i < $(this).get(0).files.length; ++i) {
@@ -152,4 +152,68 @@ $(function () {
     });
   });
   // End of Clicked Event
+  $("#movePast").on('click', 'a', function (e) {
+    e.preventDefault();
+    var value = $(this).attr('href');
+    var eventName = value.substr(value.lastIndexOf("/") + 1);
+    $('#event-title').append("<h5 class='modal-title'>" + eventName +
+      "</h5><button type='button' class='close' data-dismiss='modal'><span>&times;</span></button>");
+    // Event Lister for Event-Contents
+    $('#event-content').on('change', function () {
+      var form = new FormData();
+      for (var i = 0; i < $(this).get(0).files.length; ++i) {
+        form.append('fileToUpload[]', $(this).get(0).files[i]);
+      }
+      form.append('eventName', eventName);
+      $('#event-content-form').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+          type: 'POST',
+          url: '../handlers/php/event-content-data-handler.php',
+          data: form,
+          cache: false,
+          contentType: false,
+          processData: false,
+          success: function (data) {
+            console.log(data);
+            $.ajax({
+              type: "POST",
+              url: "../data/event-content-data.php",
+              data: {
+                data: eventName
+              },
+              success: function (data) {
+                $("#eventConts").find("#event-title").html('');
+                $("#eventConts").find("#eventCont").html('');
+                $('#event-title').append("<h5 class='modal-title'>" + eventName +
+                  "</h5><button type='button' class='close' data-dismiss='modal'><span>&times;</span></button>");
+                var jsonData = JSON.parse(data);
+                $(jsonData).each(function (index, value) {
+                  $('#eventCont').append("<a href='" + value + "' data-toggle='lightbox' data-gallery='event-content-gallery'><img src=" + value + " width='255' height='255'></a>");
+                });
+                $('#eventCont').append(
+                  "<div id='preview-container' class='jpreview-container pt-3 border mt-3'></div>");
+              }
+            });
+          }
+        });
+      });
+      // End of Event-Contents
+    });
+    $.ajax({
+      type: "POST",
+      url: "../data/event-content-data.php",
+      data: {
+        data: eventName
+      },
+      success: function (data) {
+        var jsonData = JSON.parse(data);
+        $(jsonData).each(function (index, value) {
+          $('#eventCont').append("<a href='" + value + "' data-toggle='lightbox' data-gallery='event-content-gallery'><img src=" + value + " width='255' height='255'></a>");
+        });
+        $('#eventCont').append(
+          "<div id='preview-container' class='jpreview-container pt-3 border mt-3'></div>");
+      }
+    });
+  });
 });

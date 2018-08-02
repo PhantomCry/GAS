@@ -16,8 +16,7 @@ $(function () {
         $('#moveUp').append(
           "<span class='imgCheckbox1 hovereffect'><img src='" + value +
           "' width='264' height='250' name='" +
-          filename +
-          "'><div class='overlay toggle-hover'><a id='test' href='assets/images/events/Main/" +
+          filename + "'><div class='overlay toggle-hover'><a id='test' href='assets/images/events/Main/" +
           eventName + "' data-toggle='modal' data-target='#eventConts'>" + eventName +
           "</a></div></span>");
       });
@@ -55,7 +54,7 @@ $(function () {
           "<span class='imgCheckbox1 hovereffect'><img src='" + value +
           "' width='264' height='250' name='" +
           filename + "'><div class='overlay toggle-hover'><a href='assets/images/events/Main/" +
-          eventName + "'>" + eventName + "</a></div></span>")
+          eventName + "' data-toggle='modal' data-target='#eventConts'>" + eventName + "</a></div></span>")
       });
       $("#toggle-checkbox").on('click', function () {
         $("#movePast img").imgCheckbox();
