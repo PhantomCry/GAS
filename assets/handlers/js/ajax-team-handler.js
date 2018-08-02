@@ -64,30 +64,20 @@ $(function () {
       $(data).each(function (index, value) {
         switch (value['date']) {
           case today:
-            $('#current-month').append("<img class='card-img-top' id='best-mem' src='../../assets/images/logo/template.png' alt='Card image cap'><div class='card-body'><h3 class='card-title'>Employee Name</h3><p class='card-text'>Employee Position</p></div>");
+            $('#current-month').append("<img class='card-img-top' id='best-mem' src='../../assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
             break;
           case lastMonth:
-            console.log('EYYYY');
-            console.log(index);
+            $('#last-month').append("<img class='card-img-top' id='best-mem' src='../../assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
             break;
           case lastTwoMonths:
-            console.log('Workin');
-            console.log(index);
+            $('#last-two-months').append("<img class='card-img-top' id='best-mem' src='../../assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
             break;
           case lastThreeMonths:
-            console.log('HEYYY');
-            console.log(index);
+            $('#last-three-months').append("<img class='card-img-top' id='best-mem' src='../../assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
             break;
           default:
-            console.log('Not Shown');
-            console.log(index);
             break;
         }
-        // if (value['date'] === today) {
-        //   console.log('QWE');
-        // } else if (value['date'] === lastMonth) {
-        //   console.log('ASDASDASD');
-        // }
       })
     }
   });

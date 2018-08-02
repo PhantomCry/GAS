@@ -75,12 +75,12 @@
           <div class="single-slide-item slide-1">
             <div class="container">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" id="header-text">
                   <h2>Why Partner with Global Agility?</h2>
-                  <p class="text-justify  ">
+                  <p class="text-justify">
                     Global Agility allows you to access a professionally trained staff, coupled with a solid infrastructure, secure data systems,
                     and a suite of easily integrated software and Customer management tools. Whether you are looking to outsource
-                    your entire operations, or specific aspects of your programs, or even short term support... Global provides
+                    your entire operations, or specific aspects of your programs, or even short term support. Global provides
                     a flexible workforce, with unique pricing models to ensure you only pay for what you need, when you need,
                     and at the level of performance you and your Customers require.
                   </p>
@@ -295,9 +295,9 @@
   <section id="team-month">
     <div class="container-fluid">
       <div class="row">
-        <h1 class="text-center pt-5">Team Members of the Month</h1>
+        <h1 class="text-center pt-5 pb-3">Team Members of the Month</h1>
         <div class="card-deck text-center">
-          <div class="card">
+          <div class="card" id="current-month">
             <img class="card-img-top" id="best-mem" src="./assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
@@ -308,21 +308,21 @@
       </div>
       <div class="row">
         <div class="card-columns text-center">
-          <div class="card">
+          <div class="card" id="last-month">
             <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
               <p class="card-text">Employee Position</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card" id="last-two-months">
             <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
               <p class="card-text">Employee Position</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card" id="last-three-months">
             <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>

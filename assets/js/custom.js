@@ -50,68 +50,6 @@ $(document).ready(function () {
 
 	// 4. owl carousel
 
-	// i. .team-carousel 
-
-
-	var owl = $('.team-carousel');
-	owl.owlCarousel({
-		items: 4,
-		margin: 0,
-
-		loop: true,
-		autoplay: true,
-		smartSpeed: 500,
-
-		//nav:false,
-		//navText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-
-		dots: false,
-		autoplayHoverPause: true,
-
-		responsiveClass: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-			640: {
-				items: 2
-			},
-			768: {
-				items: 3
-			},
-			992: {
-				items: 4
-			}
-		}
-
-
-	});
-
-	// ii. .client (carousel)
-
-	$('#client').owlCarousel({
-		items: 5,
-		loop: true,
-		smartSpeed: 1000,
-		autoplay: true,
-		dots: false,
-		autoplayHoverPause: true,
-		responsive: {
-			0: {
-				items: 2
-			},
-			415: {
-				items: 2
-			},
-			600: {
-				items: 3
-			},
-			1000: {
-				items: 5
-			}
-		}
-	});
-
 
 	$('.play').on('click', function () {
 		owl.trigger('play.owl.autoplay', [1000])
@@ -120,38 +58,8 @@ $(document).ready(function () {
 		owl.trigger('stop.owl.autoplay')
 	})
 
-	// iii.  testimonial
 
   // Events Carousel Start
-  $('#test-events').owlCarousel({
-    items: 1,
-		margin: 200,
-		loop: true,
-		smartSpeed: 1000,
-		autoplay: true,
-    autoplayHoverPause: false,
-		responsive: {
-			500: {
-				items: 1
-			},
-			768: {
-				items: 3
-			},
-			1024: {
-				items: 2
-			},
-			1440: {
-				items: 2
-			},
-			1366: {
-				items: 1
-			},
-			2560: {
-				items: 1
-			}
-		}
-  });
-
 	$('#up-events').owlCarousel({
 		items: 1,
 		margin: 20,
@@ -164,13 +72,13 @@ $(document).ready(function () {
 				items: 1
 			},
 			768: {
-				items: 3
+				items: 1
 			},
 			1024: {
-				items: 2
+				items: 1
 			},
 			1440: {
-				items: 2
+				items: 1
 			},
 			1366: {
 				items: 1
@@ -201,13 +109,13 @@ $(document).ready(function () {
 				items: 1
 			},
 			768: {
-				items: 3
+				items: 1
 			},
 			1024: {
-				items: 2
+				items: 1
 			},
 			1440: {
-				items: 2
+				items: 1
 			},
 			1366: {
 				items: 1
@@ -228,19 +136,6 @@ $(document).ready(function () {
 		owl.trigger('stop.owl.autoplay')
 	})
 
-	$("#testemonial-carousel").owlCarousel({
-		items: 1,
-		autoplay: true,
-		loop: true,
-		dots: true,
-		mouseDrag: true,
-		nav: false,
-		smartSpeed: 1000,
-		transitionStyle: "fade",
-		animateIn: 'fadeIn',
-		animateOut: 'fadeOutLeft'
-		// navText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
-	});
 
 
 	// 5. vedio player

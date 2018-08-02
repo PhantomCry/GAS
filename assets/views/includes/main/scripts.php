@@ -34,6 +34,9 @@
 <!--Ekko Lightbox Plugin-->
 <script type="text/javascript" src="assets/third-party-plugins/js/ekko-lightbox.min.js"></script>
 
+<!-- Team Handler -->
+<script src="assets/handlers/js/main-team-handler.js"></script>
+
 <!--Plugin Initializers-->
 <script>
   $('[data-toggle="popover"]').popover({

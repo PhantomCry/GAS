@@ -38,26 +38,11 @@
       </div>
       <div class="row">
         <div class="card-columns text-center">
-          <div class="card">
-            <img class="card-img-top" src="../../assets/images/logo/template.png" alt="Card image cap">
-            <div class="card-body">
-              <h3 class="card-title">Employee Name</h3>
-              <p class="card-text">Employee Position</p>
-            </div>
+          <div class="card" id="last-month">
           </div>
-          <div class="card">
-            <img class="card-img-top" src="../../assets/images/logo/template.png" alt="Card image cap">
-            <div class="card-body">
-              <h3 class="card-title">Employee Name</h3>
-              <p class="card-text">Employee Position</p>
-            </div>
+          <div class="card" id="last-two-months">
           </div>
-          <div class="card">
-            <img class="card-img-top" src="../../assets/images/logo/template.png" alt="Card image cap">
-            <div class="card-body">
-              <h3 class="card-title">Employee Name</h3>
-              <p class="card-text">Employee Position</p>
-            </div>
+          <div class="card" id="last-three-months">
           </div>
         </div>
       </div>
