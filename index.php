@@ -172,24 +172,24 @@
       <div class="card-group pt-5 mx-5">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Validation Processing</h5>
-            <p class="card-text">Supporting millions of transactions for image review and validation a day. A flexible workforce operating 24/7/365
+            <h3 class="card-title text-center">Validation Processing</h3>
+            <p class="card-text text-center">Supporting millions of transactions for image review and validation a day. A flexible workforce operating 24/7/365
               at 99.9% accuracy. Unique pricing models based on individual transaction, review process or field entries allowing
               you a cost effective support Team.</p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Outsourcing Projects</h5>
-            <p class="card-text">Transcription support, system immigration programs, data validation and entry projects of any size and duration.
+            <h3 class="card-title text-center">Outsourcing Projects</h3>
+            <p class="card-text text-center">Transcription support, system immigration programs, data validation and entry projects of any size and duration.
               Professional Teams are ready and available to support you and your Customers year round. Competitive pricing
               models and dedicated account management.</p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Our Tech or Yours</h5>
-            <p class="card-text">Ready-To-Go image review software, inhouse CRM tools, Customer reporting portals and technical support Teams
+            <h3 class="card-title text-center">Our Tech or Yours</h3>
+            <p class="card-text text-center">Ready-To-Go image review software, inhouse CRM tools, Customer reporting portals and technical support Teams
               allow Global to integrate quickly into your Organization and provide powerful information management tools.</p>
           </div>
         </div>
@@ -200,7 +200,7 @@
       <div class="container-fluid" id="call-center">
         <div class="row">
           <div class="col-lg-6">
-            <h1 class="text-center pt-5 mt-5">CALL CENTER SERVICES</h1>
+            <h1 class="text-center pt-5 mt-5 text-center">CALL CENTER SERVICES</h1>
             <p class="text-center p-5">We offer inbound and outbound customer service solutions. We can utilize our proprietary technology; your current
               system, or our software experts can help create a custom CRM solution to fit your specific needs.</p>
           </div>
@@ -210,45 +210,45 @@
         </div>
       </div>
       <div class="container-fluid" id="call-center-content">
-        <div class="card-group pt-5 mx-5">
+        <div class="card-columns pt-5 mx-5">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">VOICE . CHAT . EMAIL</h5>
-              <p class="card-text">Professional person to person support of your Customers through phone, chat or email sessions, using your brand.</p>
+              <h3 class="card-title text-center">VOICE . CHAT . EMAIL</h3>
+              <p class="card-text text-center">Professional person to person support of your Customers through phone, chat or email sessions, using your brand.</p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">24 / 7 / 365 COVERAGE</h5>
-              <p class="card-text">Year round coverage to ensure you and your Customers have the support they need, when they need it.</p>
+              <h3 class="card-title text-center">24 / 7 / 365 COVERAGE</h3>
+              <p class="card-text text-center">Year round coverage to ensure you and your Customers have the support they need, when they need it.</p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">MULTI LANGUAGE SUPPORT</h5>
-              <p class="card-text">English language support for voice, chat and email services. Regional language support available at reasonable
+              <h3 class="card-title text-center">MULTI LANGUAGE SUPPORT</h3>
+              <p class="card-text text-center">English language support for voice, chat and email services. Regional language support available at reasonable
                 rates.
               </p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">CRM TOOLSETS</h5>
-              <p class="card-text">Use our CRM and connectivity with your company branding, or we can integrate with your systems.</p>
+              <h3 class="card-title text-center">CRM TOOLSETS</h3>
+              <p class="card-text text-center">Use our CRM and connectivity with your company branding, or we can integrate with your systems.</p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">LOW COST REGIONS</h5>
-              <p class="card-text">Utilizing low cost regions ensures you a great price on professional teams without sacrificing professional
+              <h3 class="card-title text-center">LOW COST REGIONS</h3>
+              <p class="card-text text-center">Utilizing low cost regions ensures you a great price on professional teams without sacrificing professional
                 service.
               </p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">DATA ANALYTICS</h5>
-              <p class="card-text">Focus on continual improvement through advanced data analytics to drive issue resolution and customer satisfaction
+              <h3 class="card-title text-center">DATA ANALYTICS</h3>
+              <p class="card-text text-center">Focus on continual improvement through advanced data analytics to drive issue resolution and customer satisfaction
                 rates.
               </p>
             </div>
