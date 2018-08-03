@@ -5,7 +5,6 @@
       for ($i = 0; $i < count($_FILES['fileToUpload']['name']); $i++ ) {
         $target_dir = "../../images/events/Main/$eventFolder/";
         $target_dir = $target_dir . basename( $_FILES['fileToUpload']['name'][$i]);
-        echo $target_dir;
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_dir,PATHINFO_EXTENSION));
         

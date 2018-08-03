@@ -1,0 +1,6 @@
+RewriteEngine On  
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule    ^awardManager/?$    assets/views/awardManager.php    [NC,L]  
+RewriteRule    ^eventManager/?$    assets/views/addEvent.php    [NC,L]  
+RewriteRule    ^eventGallery/?$    assets/views/events-gallery.php    [NC,L]  

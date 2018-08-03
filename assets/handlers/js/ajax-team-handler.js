@@ -55,7 +55,7 @@ $(function () {
 
   $.ajax({
     type: 'GET',
-    url: '../data/team-data.json',
+    url: 'assets/data/team-data.json',
     dataType: 'json',
     cache: false,
     contentType: false,
@@ -65,22 +65,22 @@ $(function () {
         switch (value['date']) {
           case today:
           $('#current-month').html('');
-            $('#current-month').append("<img class='card-img-top' src='../../assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
+            $('#current-month').append("<img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
             break;
           case lastMonth:
           $('#last-month').html('');
-            $('#last-month').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top'  src='../../assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
+            $('#last-month').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top'  src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
             break;
           case lastTwoMonths:
           $('#last-two-months').html('');
-            $('#last-two-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='../../assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
+            $('#last-two-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
             break;
           case lastThreeMonths:
           $('#last-three-months').html('');
-            $('#last-three-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='../../assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
+            $('#last-three-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
             break;
           default:
-          $('#others').append("<div class='card'><h2 class='text-center'>"+value['date']+"</h2><img class='card-img-top' src='../../assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div></div>");
+          $('#others').append("<div class='card'><h2 class='text-center'>"+value['date']+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div></div>");
             break;
         }
       })
@@ -95,7 +95,7 @@ $(function () {
     var formData = new FormData(this);
     $.ajax({
       type: 'POST',
-      url: '../handlers/php/team-handler.php',
+      url: 'assets/handlers/php/team-handler.php',
       data: formData,
       cache: false,
       contentType: false,

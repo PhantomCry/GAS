@@ -5,7 +5,7 @@ $(function () {
     var data = new FormData(this);
     $.ajax({
       type: 'POST',
-      url: '../handlers/php/new-event-handler.php',
+      url: 'assets/handlers/php/new-event-handler.php',
       data: data,
       cache: false,
       contentType: false,
@@ -14,7 +14,7 @@ $(function () {
         $('#moveUp').find("span").remove();
         $.ajax({
           type: 'GET',
-          url: '../data/up-event-data.php',
+          url: 'assets/data/up-event-data.php',
           dataType: 'json',
           success: function (data) {
             $(data).each(function (index, value) {
@@ -25,7 +25,7 @@ $(function () {
                 value.lastIndexOf("_")
               );
               $('#moveUp').append(
-                "<span class='imgCheckbox1 hovereffect'><img src='" + value +
+                "<span class='imgCheckbox1 hovereffect'><img src='assets/images/events/Upcoming/" + filename +
                 "' width='264' height='250' name='" +
                 filename +
                 "'><div class='overlay toggle-hover'><a id='test' href='assets/images/events/Main/" +
@@ -46,7 +46,7 @@ $(function () {
       var dataString = $(this).serialize();
       $.ajax({
         type: 'POST',
-        url: '../handlers/php/marking-handler.php',
+        url: 'assets/handlers/php/marking-handler.php',
         data: dataString,
         success: function (data) {
           console.log("Done");
@@ -60,7 +60,7 @@ $(function () {
       var dataString = $(this).serialize();
       $.ajax({
         type: 'POST',
-        url: '../handlers/php/delete-up-event-handler.php',
+        url: 'assets/handlers/php/delete-up-event-handler.php',
         data: dataString,
         success: function (data) {
           console.log("Deleted Selected Images");
@@ -75,7 +75,7 @@ $(function () {
       var dataString = $(this).serialize();
       $.ajax({
         type: 'POST',
-        url: '../handlers/php/delete-past-event-handler.php',
+        url: 'assets/handlers/php/delete-past-event-handler.php',
         data: dataString,
         success: function (data) {
           console.log("Deleted Selected Images");
@@ -101,16 +101,18 @@ $(function () {
         e.preventDefault();
         $.ajax({
           type: 'POST',
-          url: '../handlers/php/event-content-data-handler.php',
+          url: 'assets/handlers/php/event-content-data-handler.php',
           data: form,
           cache: false,
           contentType: false,
           processData: false,
           success: function (data) {
-            console.log(data);
+            bootoast.toast({
+              message: 'Images Added',
+            });
             $.ajax({
               type: "POST",
-              url: "../data/event-content-data.php",
+              url: "assets/data/event-content-data.php",
               data: {
                 data: eventName
               },
@@ -121,6 +123,7 @@ $(function () {
                   "</h5><button type='button' class='close' data-dismiss='modal'><span>&times;</span></button>");
                 var jsonData = JSON.parse(data);
                 $(jsonData).each(function (index, value) {
+                  value = value.replace('../', 'assets/');
                   $('#eventCont').append("<a href='" + value + "' data-toggle='lightbox' data-gallery='event-content-gallery'><img src=" + value + " width='255' height='255'></a>");
                 });
                 $('#eventCont').append(
@@ -137,13 +140,14 @@ $(function () {
     });
     $.ajax({
       type: "POST",
-      url: "../data/event-content-data.php",
+      url: "assets/data/event-content-data.php",
       data: {
         data: eventName
       },
       success: function (data) {
         var jsonData = JSON.parse(data);
         $(jsonData).each(function (index, value) {
+          value = value.replace('../', 'assets/');
           $('#eventCont').append("<a href='" + value + "' data-toggle='lightbox' data-gallery='event-content-gallery'><img src=" + value + " width='255' height='255'></a>");
         });
         $('#eventCont').append(
@@ -169,7 +173,7 @@ $(function () {
         e.preventDefault();
         $.ajax({
           type: 'POST',
-          url: '../handlers/php/event-content-data-handler.php',
+          url: 'assets/handlers/php/event-content-data-handler.php',
           data: form,
           cache: false,
           contentType: false,
@@ -178,7 +182,7 @@ $(function () {
             console.log(data);
             $.ajax({
               type: "POST",
-              url: "../data/event-content-data.php",
+              url: "assets/data/event-content-data.php",
               data: {
                 data: eventName
               },
@@ -189,6 +193,7 @@ $(function () {
                   "</h5><button type='button' class='close' data-dismiss='modal'><span>&times;</span></button>");
                 var jsonData = JSON.parse(data);
                 $(jsonData).each(function (index, value) {
+                  value = value.replace('../', 'assets/');
                   $('#eventCont').append("<a href='" + value + "' data-toggle='lightbox' data-gallery='event-content-gallery'><img src=" + value + " width='255' height='255'></a>");
                 });
                 $('#eventCont').append(
@@ -202,13 +207,14 @@ $(function () {
     });
     $.ajax({
       type: "POST",
-      url: "../data/event-content-data.php",
+      url: "assets/data/event-content-data.php",
       data: {
         data: eventName
       },
       success: function (data) {
         var jsonData = JSON.parse(data);
         $(jsonData).each(function (index, value) {
+          value = value.replace('../', 'assets/');
           $('#eventCont').append("<a href='" + value + "' data-toggle='lightbox' data-gallery='event-content-gallery'><img src=" + value + " width='255' height='255'></a>");
         });
         $('#eventCont').append(

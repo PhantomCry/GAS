@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+  <base href="GAS">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" type="image/icon" href="../images/logo/favicon.ico">
-  <link rel="stylesheet" href="../event-assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../third-party-plugins/css/bootstrap-datepicker.min.css">
-  <link rel="stylesheet" href="../event-assets/css/main.css">
+  <link rel="shortcut icon" type="image/icon" href="assets/images/logo/favicon.ico">
+  <link rel="stylesheet" href="assets/event-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/third-party-plugins/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="assets/event-assets/css/main.css">
   <title>Team Manager</title>
 </head>
 
@@ -28,7 +29,7 @@
       <div class="row">
         <div class="card-deck mx-auto text-center pt-3">
           <div class="card" id="current-month">
-            <img class="card-img-top" src="../../assets/images/logo/template.png" alt="Card image cap">
+            <img class="card-img-top" src="assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
               <p class="card-text">Employee Position</p>
@@ -44,21 +45,21 @@
         </div>
         <div class="card-columns text-center pt-3">
           <div class="card" id="last-month">
-            <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
+            <img class="card-img-top" src="assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
               <p class="card-text">Employee Position</p>
             </div>
           </div>
           <div class="card" id="last-two-months">
-            <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
+            <img class="card-img-top" src="assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
               <p class="card-text">Employee Position</p>
             </div>
           </div>
           <div class="card" id="last-three-months">
-            <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
+            <img class="card-img-top" src="assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
               <p class="card-text">Employee Position</p>

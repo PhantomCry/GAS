@@ -2,17 +2,19 @@
 <html>
 
 <head>
+  <base href="GAS">
   <title>Event's Picture Manager</title>
-  <link rel="shortcut icon" type="image/icon" href="../images/logo/favicon.ico" />
-  <link rel="stylesheet" href="../event-assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../third-party-plugins/css/jpreview.css">
-  <link rel="stylesheet" href="../third-party-plugins/css/bootoast.min.css">
-  <link rel="stylesheet" href="../event-assets/css/main.css">
-  <link rel="stylesheet" href="../third-party-plugins/css/ekko-lightbox.css">
+  <link rel="shortcut icon" type="image/icon" href="assets/images/logo/favicon.ico" />
+  <link rel="stylesheet" href="assets/event-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/third-party-plugins/css/jpreview.css">
+  <link rel="stylesheet" href="assets/third-party-plugins/css/bootoast.min.css">
+  <link rel="stylesheet" href="assets/event-assets/css/main.css">
+  <link rel="stylesheet" href="assets/third-party-plugins/css/ekko-lightbox.css">
 </head>
 
 <body>
   <?php include 'includes/events/navbar.php';?>
+  <?php include 'includes/events/create-event-modal.php';?>
   <div class="container-fluid">
     <div class="row">
       <ul class="inlineList container-fluid border-bottom">

@@ -21,7 +21,7 @@
               <a href="#home">Home</a>
             </li>
             <li>
-              <a href="assets/views/events-gallery.php">Events</a>
+              <a href="eventGallery">Events</a>
             </li>
             <li class="smooth-menu">
               <a href="#about">About</a>

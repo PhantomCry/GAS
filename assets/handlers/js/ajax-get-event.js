@@ -3,7 +3,7 @@ $(function () {
   // Get Data of Upcoming Events
   $.ajax({
     type: 'GET',
-    url: '../data/up-event-data.php',
+    url: 'assets/data/up-event-data.php',
     dataType: 'json',
     success: function (data) {
       $(data).each(function (index, value) {
@@ -14,7 +14,7 @@ $(function () {
           value.lastIndexOf("_")
         );
         $('#moveUp').append(
-          "<span class='imgCheckbox1 hovereffect'><img src='" + value +
+          "<span class='imgCheckbox1 hovereffect'><img src='assets/images/events/Upcoming/" + filename +
           "' width='264' height='250' name='" +
           filename + "'><div class='overlay toggle-hover'><a id='test' href='assets/images/events/Main/" +
           eventName + "' data-toggle='modal' data-target='#eventConts'>" + eventName +
@@ -40,7 +40,7 @@ $(function () {
   // Get Data of Past Events
   $.ajax({
     type: 'GET',
-    url: '../data/past-event-data.php',
+    url: 'assets/data/past-event-data.php',
     dataType: 'json',
     success: function (data) {
       $(data).each(function (index, value) {
@@ -51,7 +51,7 @@ $(function () {
           value.lastIndexOf("_")
         );
         $('#movePast').append(
-          "<span class='imgCheckbox1 hovereffect'><img src='" + value +
+          "<span class='imgCheckbox1 hovereffect'><img src='assets/images/events/Past/" + filename +
           "' width='264' height='250' name='" +
           filename + "'><div class='overlay toggle-hover'><a href='assets/images/events/Main/" +
           eventName + "' data-toggle='modal' data-target='#eventConts'>" + eventName + "</a></div></span>")
