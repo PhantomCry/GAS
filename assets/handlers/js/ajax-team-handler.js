@@ -1,4 +1,7 @@
 $(function () {
+  
+  getJSONData();
+  
   var month = new Array();
   month[0] = "January";
   month[1] = "February";
@@ -14,7 +17,6 @@ $(function () {
   month[11] = "December";
 
   var xmlHttp;
-
   function srvTime() {
     try {
       //FF, Opera, Safari, Chrome
@@ -52,44 +54,63 @@ $(function () {
 
   var lastThreeMonths = new Date(st);
   lastThreeMonths = month[lastThreeMonths.getMonth() - 3] + "-" + year;
+  
+  function getJSONData(){
+    $.ajax({
+      type: 'GET',
+      url: 'assets/data/team-data.json',
+      dataType: 'json',
+      cache: false,
+      contentType: false,
+      processData: false,
+      success: function (data) {
+        $(data).each(function (index, value) {
+          switch (value['date']) {
+            case today:
+            $('#current-month').html('');
+              $('#current-month').append("<img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
+              break;  
+            case lastMonth:
+            $('#last-month').html('');
+              $('#last-month').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top'  src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
+              break;
+            case lastTwoMonths:
+            $('#last-two-months').html('');
+              $('#last-two-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
+              break;
+            case lastThreeMonths:
+            $('#last-three-months').html('');
+              $('#last-three-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
+              break;
+            default:
+            $('#others').append("<div class='card'><h2 class='text-center'>"+value['date']+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
+              break;
+          }
+        });
+        
+        $('.close').on('click', function (){
+          var id = $(this).attr('id');
+          // console.log(id);
+          deleteMem(id);
+          
+        });
+      }
+    });
+  }
+  
+  
+  function deleteMem(id){
+    $.ajax({
+      type: 'POST',
+      url: 'assets/handlers/php/team-delete-handler.php',
+      data: { id : id},
+      success: function () {
+        location.reload();
+      }
+    })
+  }
 
-  $.ajax({
-    type: 'GET',
-    url: 'assets/data/team-data.json',
-    dataType: 'json',
-    cache: false,
-    contentType: false,
-    processData: false,
-    success: function (data) {
-      $(data).each(function (index, value) {
-        switch (value['date']) {
-          case today:
-          $('#current-month').html('');
-            $('#current-month').append("<img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
-            break;
-          case lastMonth:
-          $('#last-month').html('');
-            $('#last-month').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top'  src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
-            break;
-          case lastTwoMonths:
-          $('#last-two-months').html('');
-            $('#last-two-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
-            break;
-          case lastThreeMonths:
-          $('#last-three-months').html('');
-            $('#last-three-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
-            break;
-          default:
-          $('#others').append("<div class='card'><h2 class='text-center'>"+value['date']+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div></div>");
-            break;
-        }
-      })
-    }
-  });
-
-
-
-
+  
   $("#award-form").on('submit', function (e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -100,8 +121,8 @@ $(function () {
       cache: false,
       contentType: false,
       processData: false,
-      success: function (data) {
-        console.log(data);
+      success: function () {
+        getJSONData();
       }
     });
   });
