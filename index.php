@@ -19,9 +19,9 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-
   <!-- TITLE OF SITE -->
   <title>Global Agility Solutions</title>
+
 
   <!-- for title img -->
   <link rel="shortcut icon" type="image/icon" href="assets/images/logo/favicon.ico" />

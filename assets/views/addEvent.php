@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="assets/third-party-plugins/css/bootoast.min.css">
   <link rel="stylesheet" href="assets/event-assets/css/main.css">
   <link rel="stylesheet" href="assets/third-party-plugins/css/ekko-lightbox.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
 </head>
 
 <body>
@@ -61,7 +63,12 @@
           <div class="modal-header" id="event-title">
           </div>
           <div class="modal-body" id="eventCont">
-          </div>
+            </div>
+            <div class="container">
+              <progress id="progressBar" value="0" max="100" style="width:100%;"></progress>
+              <p id="tracker"></p>
+              <h3 id="status"></h3>
+            </div>
           <div class="modal-footer">
             <form action="" class="custom-file" id="event-content-form">
               <input type="file" class="event-cont-uploader custom-file-input" multiple data-jpreview-container="#preview-container" id="event-content"

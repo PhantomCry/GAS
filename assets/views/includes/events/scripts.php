@@ -5,6 +5,7 @@
 <script src="assets/third-party-plugins/js/jquery.imgcheckbox.js"></script>
 <script src="assets/third-party-plugins/js/jpreview.js"></script>
 <script src="assets/third-party-plugins/js/ekko-lightbox.min.js"></script>
+<script src="assets/third-party-plugins/js/jq-ajax-progress.min.js"></script>
 <script src="assets/handlers/js/dom-event-handlers.js"></script>
 <script src="assets/handlers/js/ajax-post-event.js"></script>
 <script src="assets/handlers/js/ajax-get-event.js"></script>
@@ -13,4 +14,13 @@
         event.preventDefault();
         $(this).ekkoLightbox();
     });
+    $(function () {
+        $('.unclickable').on('click', function(e){
+            e.preventDefault();
+        });
+        $('[data-toggle="tooltip"]').tooltip({
+            html: true
+        })
+
+    })
 </script>

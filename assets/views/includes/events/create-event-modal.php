@@ -3,6 +3,13 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Create Event</h5>
+        <a class="unclickable" href="" data-toggle="tooltip" title="<div><h5>Restrictions:</h5><p class='text-center'>Event Title and Cover Picture must not have any special characters including whitespaces.</p></div>" data-placement="right">
+          <span>
+            <i class="fas fa-info-circle p-2"></i>
+          </span>
+        </a>
+        <!-- Restriction Rules Info -->
+
         <button type="button" class="close" data-dismiss="modal">
           <span>&times;</span>
         </button>

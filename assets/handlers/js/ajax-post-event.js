@@ -11,6 +11,12 @@ $(function () {
       contentType: false,
       processData: false,
       success: function (data) {
+        console.log(JSON.parse(data));
+        var jsonData = JSON.parse(data);
+        bootoast.toast({
+          type: jsonData['type'],
+          message: jsonData['message'],
+        });
         $('#moveUp').find("span").remove();
         $.ajax({
           type: 'GET',
@@ -33,9 +39,6 @@ $(function () {
                 "</a></div></span>");
             });
           }
-        });
-        bootoast.toast({
-          message: 'Event Created',
         });
       }
     });
@@ -106,6 +109,16 @@ $(function () {
           cache: false,
           contentType: false,
           processData: false,
+          uploadProgress: function (e) { // From jq-ajax-progress.min.js plugin
+              ($('#tracker'))[0].innerHTML = "Uploaded "+event.loaded+" bytes of "+event.total;
+              var percent = (event.loaded / event.total) * 100;
+              ($('#progressBar'))[0].value = Math.round(percent);
+              if(($('#progressBar'))[0].value == 100) {
+                ($("#status"))[0].innerHTML = "Upload Complete";
+              } else {
+                ($("#status"))[0].innerHTML = Math.round(percent)+"% uploaded... Please wait";
+              }
+          },
           success: function (data) {
             bootoast.toast({
               message: 'Images Added',
@@ -133,9 +146,6 @@ $(function () {
           }
         });
       });
-      // $('#eventConts').on('hidden.bs.modal', function (e) {
-      //   form = [];
-      // });
       // End of Event-Contents
     });
     $.ajax({
