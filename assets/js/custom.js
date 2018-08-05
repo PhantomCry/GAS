@@ -200,7 +200,7 @@ $(document).ready(function () {
 		$(".event-up-link").addClass("selected");
 		$(".event-past-link").removeClass("selected");
 		$("#past-events").addClass("hide");
-		$("#up-events").removeClass("hide").fadeIn(3000);
+		$("#up-events").removeClass("hide");
 	});
 
 });

@@ -53,6 +53,9 @@ $(function () {
     var lastThreeMonths = new Date(st);
     lastThreeMonths = month[lastThreeMonths.getMonth() - 3] + "-" + year;
 
+    var lastFourMonths = new Date(st);
+    lastFourMonths = month[lastFourMonths.getMonth() - 4] + "-" + year;
+
     $.ajax({
         type: 'GET',
         url: 'assets/data/team-data.json',
@@ -63,21 +66,21 @@ $(function () {
         success: function (data) {
             $(data).each(function (index, value) {
                 switch (value['date']) {
-                    case today:
-                        $('#current-month').html('');
-                        $('#current-month').append("<h1 class='text-center'>"+value['date'].split('-')[0]+"</h1><img class='card-img-top' id='best-mem' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
-                        break;
                     case lastMonth:
                         $('#last-month').html('');
-                        $('#last-month').append("<h1 class='text-center'>"+value['date'].split('-')[0]+"</h1><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
+                        $('#last-month').append("<h1 class='text-center'>" + value['date'].split('-')[0] + "</h1><img class='card-img-top' id='best-mem' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
                         break;
                     case lastTwoMonths:
                         $('#last-two-months').html('');
-                        $('#last-two-months').append("<h1 class='text-center'>"+value['date'].split('-')[0]+"</h1><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
+                        $('#last-two-months').append("<h1 class='text-center'>" + value['date'].split('-')[0] + "</h1><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
                         break;
                     case lastThreeMonths:
                         $('#last-three-months').html('');
-                        $('#last-three-months').append("<h1 class='text-center'>"+value['date'].split('-')[0]+"</h1><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
+                        $('#last-three-months').append("<h1 class='text-center'>" + value['date'].split('-')[0] + "</h1><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
+                        break;
+                    case lastFourMonths:
+                        $('#last-four-months').html('');
+                        $('#last-four-months').append("<h1 class='text-center'>" + value['date'].split('-')[0] + "</h1><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div>");
                         break;
                     default:
                         break;

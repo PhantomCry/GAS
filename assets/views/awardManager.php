@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <base href="GAS">
   <meta charset="UTF-8">
@@ -20,7 +19,7 @@
   <div class="container-fluid">
     <div class="container border">
       <div class="row justify-content-center">
-        <h1>Current Month</h1>
+        <h1>Team Member of the Month</h1>
       </div>
     </div>
   </div>
@@ -28,7 +27,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="card-deck mx-auto text-center pt-3">
-          <div class="card" id="current-month">
+          <div class="card pb-3" id="last-month">
             <img class="card-img-top" src="assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
@@ -44,13 +43,6 @@
           </div>
         </div>
         <div class="card-columns text-center pt-3">
-          <div class="card" id="last-month">
-            <img class="card-img-top" src="assets/images/logo/template.png" alt="Card image cap">
-            <div class="card-body">
-              <h3 class="card-title">Employee Name</h3>
-              <p class="card-text">Employee Position</p>
-            </div>
-          </div>
           <div class="card" id="last-two-months">
             <img class="card-img-top" src="assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
@@ -59,6 +51,13 @@
             </div>
           </div>
           <div class="card" id="last-three-months">
+            <img class="card-img-top" src="assets/images/logo/template.png" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title">Employee Name</h3>
+              <p class="card-text">Employee Position</p>
+            </div>
+          </div>
+          <div class="card" id="last-four-months">
             <img class="card-img-top" src="assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>

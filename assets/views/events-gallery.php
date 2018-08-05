@@ -41,7 +41,7 @@
                         <h1 class="text-white">Past Events</h1>
                     </li>
                 </ul>
-                <div class="row pl-3">
+                <div class="row pl-3 pb-3">
                     <div class="col-12 mx-auto">
                         <form id="movePast">
                         </form>

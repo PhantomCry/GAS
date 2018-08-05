@@ -54,6 +54,11 @@ $(function () {
 
   var lastThreeMonths = new Date(st);
   lastThreeMonths = month[lastThreeMonths.getMonth() - 3] + "-" + year;
+
+  var lastFourMonths = new Date(st);
+  lastFourMonths = month[lastFourMonths.getMonth() - 4] + "-" + year;
+
+
   
   function getJSONData(){
     $.ajax({
@@ -66,33 +71,30 @@ $(function () {
       success: function (data) {
         $(data).each(function (index, value) {
           switch (value['date']) {
-            case today:
-            $('#current-month').html('');
-              $('#current-month').append("<img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
-              break;  
             case lastMonth:
             $('#last-month').html('');
-              $('#last-month').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top'  src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
-              break;
+              $('#last-month').append("<img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='btn btn-danger remove' id='"+index+"'>Remove</button>");
+              break;  
             case lastTwoMonths:
             $('#last-two-months').html('');
-              $('#last-two-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
+              $('#last-two-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top'  src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='btn btn-danger remove' id='"+index+"'>Remove</button>");
               break;
             case lastThreeMonths:
             $('#last-three-months').html('');
-              $('#last-three-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
+              $('#last-three-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='btn btn-danger remove' id='"+index+"'>Remove</button>");
+              break;
+            case lastFourMonths:
+            $('#last-four-months').html('');
+              $('#last-four-months').append("<h2 class='text-center'>"+value['date'].split('-')[0]+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'><div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div><button type='button' class='btn btn-danger remove' id='"+index+"'>Remove</button>");
               break;
             default:
-            $('#others').append("<div class='card'><h2 class='text-center'>"+value['date']+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div></div><button type='button' class='close' id='"+index+"'><span>&times;</span></button>");
+            $('#others').append("<div class='card'><h2 class='text-center'>"+value['date']+"</h2><img class='card-img-top' src='assets/images/awards/" + year + "/" + value['pic'] + "' alt='Card image cap'div class='card-body'><h3 class='card-title'>" + value['first-name'] + ' ' + value['last-name'] + "</h3><p class='card-text'>" + value['position'] + "</p></div></div><button type='button' class='btn btn-danger remove' id='"+index+"'>Remove</button>");
               break;
           }
         });
-        
-        $('.close').on('click', function (){
+        $('.remove').on('click', function (){
           var id = $(this).attr('id');
-          // console.log(id);
           deleteMem(id);
-          
         });
       }
     });
@@ -103,8 +105,9 @@ $(function () {
     $.ajax({
       type: 'POST',
       url: 'assets/handlers/php/team-delete-handler.php',
-      data: { id : id},
-      success: function () {
+      data: { id : id },
+      success: function (data) {
+        console.log(data);
         location.reload();
       }
     })

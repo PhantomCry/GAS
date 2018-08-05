@@ -1,7 +1,7 @@
 #preview {
   background-color: lightgrey;
-    width: 100%;
-    padding: 0;
+  width: 100%;
+  padding: 0;
 }
 
 .hovereffect {
@@ -20,7 +20,7 @@
   border-right: 1px solid #FFF;
   border-left: 1px solid #FFF;
   transition: opacity 0.55s, transform 0.35s;
-  transform: scale(0,3);
+  transform: scale(0, 3);
 }
 
 .hovereffect:hover .overlay {
@@ -31,7 +31,9 @@
 }
 
 .hovereffect img {
-  display: inline;
+  object-fit: cover;
+  min-width: 30vh;
+  height: 40vh;
   position: relative;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
@@ -41,8 +43,8 @@
   filter: brightness(0.4);
 }
 
-
-.hovereffect a, .hovereffect p {
+.hovereffect a,
+.hovereffect p {
   color: #FFF;
 }
 
@@ -73,23 +75,22 @@
 }
 
 #team-month .card-img-top {
-    object-fit: cover;
-    max-width: 20vw;
-    height: auto;
-    align-self: center;
+  object-fit: scale-down;
+  max-width: 20vw;
+  height: 50vh;
+  align-self: center;
 }
 
-#particles-js{
+#particles-js {
   background-color: #246b1e;
-  position:fixed;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  z-index:-1; 
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 #contents {
   position: fixed;
 }
-

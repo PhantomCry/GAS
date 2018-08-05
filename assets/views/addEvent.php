@@ -47,7 +47,7 @@
           <button class="btn btn-danger m-2" form="movePast" type="submit" id="deletePast">Delete</button>
         </li>
       </ul>
-      <div class="row pl-3">
+      <div class="row pl-3 pb-3">
         <div class="col-12 mx-auto">
           <form id="movePast">
           </form>

@@ -30,7 +30,7 @@
               <a href="#service">Service</a>
             </li>
             <li class="smooth-menu">
-              <a href="#team">Team</a>
+              <a href="#team-month">Team</a>
             </li>
             <li class="smooth-menu">
               <a href="#contact">Contact</a>

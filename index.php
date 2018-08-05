@@ -1,6 +1,5 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
-
 <head>
   <!-- META DATA -->
   <base href="GAS">
@@ -143,10 +142,9 @@
         </div>
         <div class="col-lg-6 p-5">
           <div class="embed-responsive embed-responsive-16by9 rounded">
-          <video width="400" controls>
-  <source src="assets/vids/GAS_VID.MP4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+            <video width="400" controls>
+              <source src="assets/vids/GAS_VID.MP4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
           </div>
         </div>
       </div>
@@ -160,7 +158,7 @@
     <div class="container-fluid" id="tolling">
       <div class="row">
         <div class="col-lg-6 col-fluid">
-          <img class="img-fluid" src="http://www.neurallabs.net/images/neurallabs228.jpg" alt="">
+          <img id="toll-img" class="img-fluid" src="http://www.neurallabs.net/images/neurallabs228.jpg" alt="">
         </div>
         <div class="col-lg-6">
           <h1 class="text-center pt-5 mt-5">Tolling and Image Review</h1>
@@ -261,7 +259,7 @@
   <!--Service end-->
 
   <!--Team start -->
-  <section id="team" class="team">
+  <!-- <section id="team" class="team">
     <div class="container">
       <div class="team-details">
         <div class="project-header team-header text-center">
@@ -292,7 +290,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--Team end-->
 
   <!-- Team Members of the Month Start -->
@@ -301,7 +299,7 @@
       <div class="row">
         <h1 class="text-center pt-5 pb-3">Team Members of the Month</h1>
         <div class="card-deck text-center">
-          <div class="card" id="current-month">
+          <div class="card" id="last-month">
             <img class="card-img-top" id="best-mem" src="./assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>
@@ -312,13 +310,6 @@
       </div>
       <div class="row">
         <div class="card-columns text-center">
-          <div class="card" id="last-month">
-            <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
-            <div class="card-body">
-              <h3 class="card-title">Employee Name</h3>
-              <p class="card-text">Employee Position</p>
-            </div>
-          </div>
           <div class="card" id="last-two-months">
             <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
@@ -327,6 +318,13 @@
             </div>
           </div>
           <div class="card" id="last-three-months">
+            <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title">Employee Name</h3>
+              <p class="card-text">Employee Position</p>
+            </div>
+          </div>
+          <div class="card" id="last-four-months">
             <img class="card-img-top" src="./assets/images/logo/template.png" alt="Card image cap">
             <div class="card-body">
               <h3 class="card-title">Employee Name</h3>

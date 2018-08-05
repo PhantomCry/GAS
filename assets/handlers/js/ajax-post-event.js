@@ -11,7 +11,6 @@ $(function () {
       contentType: false,
       processData: false,
       success: function (data) {
-        console.log(JSON.parse(data));
         var jsonData = JSON.parse(data);
         bootoast.toast({
           type: jsonData['type'],
@@ -110,7 +109,6 @@ $(function () {
           contentType: false,
           processData: false,
           uploadProgress: function (e) { // From jq-ajax-progress.min.js plugin
-              ($('#tracker'))[0].innerHTML = "Uploaded "+event.loaded+" bytes of "+event.total;
               var percent = (event.loaded / event.total) * 100;
               ($('#progressBar'))[0].value = Math.round(percent);
               if(($('#progressBar'))[0].value == 100) {
@@ -172,7 +170,7 @@ $(function () {
     var eventName = value.substr(value.lastIndexOf("/") + 1);
     $('#event-title').append("<h5 class='modal-title'>" + eventName +
       "</h5><button type='button' class='close' data-dismiss='modal'><span>&times;</span></button>");
-    // Event Lister for Event-Contents
+    // Event Listener for Event-Contents
     $('#event-content').on('change', function () {
       var form = new FormData();
       for (var i = 0; i < $(this).get(0).files.length; ++i) {
@@ -188,8 +186,19 @@ $(function () {
           cache: false,
           contentType: false,
           processData: false,
+          uploadProgress: function (e) { // From jq-ajax-progress.min.js plugin
+              var percent = (event.loaded / event.total) * 100;
+              ($('#progressBar'))[0].value = Math.round(percent);
+              if(($('#progressBar'))[0].value == 100) {
+                ($("#status"))[0].innerHTML = "Upload Complete";
+              } else {
+                ($("#status"))[0].innerHTML = Math.round(percent)+"% uploaded... Please wait";
+              }
+          },
           success: function (data) {
-            console.log(data);
+            bootoast.toast({
+              message: 'Images Added',
+            });
             $.ajax({
               type: "POST",
               url: "assets/data/event-content-data.php",
